@@ -1,7 +1,19 @@
-import handimg01 from './assets/rock.svg'
+import rockImg from './assets/rock.svg';
+import scissorImg from './assets/scissor.svg';
+import paperImg from './assets/paper.svg';
 
-function HandIcon(){
-    return <img src ={handimg01} alt="주먹" />;
+let src;
+function HandIcon({value}) {
+  if(value ==='rock'){
+    src=rockImg;
+  }
+  else if(value ==='scissor'){
+    src=scissorImg;
+  }
+  else {
+    src=paperImg;
+  }
+  return <img src={src} alt={value} />;
 }
 
 export default HandIcon;
